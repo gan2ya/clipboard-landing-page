@@ -1,0 +1,266 @@
+/*
+font-family: 'Bai Jamjuree', sans-serif;
+- Mobile: 375px
+- Desktop: 1440px
+
+### Primary
+
+- Strong Cyan: hsl(171, 66%, 44%)
+- Light Blue: hsl(233, 100%, 69%)
+
+### Neutral
+
+- Dark Grayish Blue: hsl(210, 10%, 33%)
+- Grayish Blue: hsl(201, 11%, 66%)
+
+- Font size: 18px
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: hsl(201, 11%, 66%);
+    text-align: center;
+    font-size: 18px;
+    background: top /100%  no-repeat url(./images/bg-header-desktop.png);
+}
+h1,h2,h3{
+    color: hsl(210, 10%, 33%);
+    margin-bottom: 20px;
+}
+
+.purple{
+    background-color:  hsl(233, 100%, 69%);
+    box-shadow: 2px 2px 6px hsl(233, 100%, 69%);
+}
+.green{
+    background-color: hsl(171, 66%, 44%);
+    box-shadow: 2px 2px 6px  hsl(171, 66%, 44%);
+}
+button{
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-family: 'Bai Jamjuree', sans-serif;
+    border-radius: 30px;
+    outline: none;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-weight: 400;
+}
+
+
+/*Header*/
+
+header{
+    margin-top: 100px;
+    width: 100%;
+    text-align: center;
+}
+header .logo{
+    width: 90px;
+    height: auto;
+    margin-bottom: 50px;
+}
+header button{
+    margin: 40px 10px 0;
+    
+    
+}
+
+/*Main*/
+
+main{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+section{
+    text-align: center;
+    margin-bottom: 50px;
+    width: 100%;
+}
+section.section_center{
+    max-width: 700px;
+}
+main img{
+   max-width: 100%;
+   object-fit: contain;
+}
+section.multi_section{
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+    padding: 0 20px;
+}
+.multi_section .block{
+    margin: 30px 20px;
+    flex:1;
+}
+.multi_section .block img{
+    margin-bottom: 30px;
+    width: 50px;
+    height: 50px;
+}
+
+section.section_company{
+    margin:50px 0 100px;
+}
+.multi_section .company{
+    margin:40px 20px;
+    flex:1;
+}
+
+main button{
+    margin: 40px 10px 0;
+}
+
+.text_block{
+    text-align: left;
+    
+    width: 40%;
+}
+.text_block .text_block_part{
+    margin-top:30px;
+}
+.multi_section .image_block{
+    width: 60%;
+}
+.multi_section .image_block img{
+    width:1000px;
+    min-width:500px;
+    margin-left: -150px;
+}
+
+/*Footer*/
+
+footer{
+    margin-top: 100px;
+    width: 100%;
+    padding: 0 20px;
+}
+footer .section{
+    display: flex;
+    justify-content: space-around;
+    
+}
+footer section>div{
+    margin:20px 10px
+}
+footer .block_img{
+    width: 10%;
+   
+}
+.block_img img{
+    padding-top: 10px;
+    width: 50px;
+}
+
+footer .block_link{
+    width: 50%;
+}
+footer .block_link ul{
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+footer .block_link ul li{
+    width:33%;
+    margin: 10px 0;
+    text-align: left;
+}
+
+footer .block_link ul li a{
+    text-decoration: none;
+    color:hsl(201, 11%, 66%);
+    
+}
+footer .block_link ul li a:hover{
+    color: hsl(171, 66%, 44%);
+}
+footer .block_social{
+    width: 40%;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+footer .block_social i{
+    font-size: 24px;
+    margin-left: 15px;
+    color:hsl(210, 10%, 33%);
+    
+
+}
+footer .block_social i:hover{
+    color: hsl(171, 66%, 44%);
+}
+
+@media (max-width:768px){
+    body{
+        min-width: 375px;
+        padding: 0 20px;
+    }
+    header button, main button{
+        width: 100%;
+        margin: 20px 0 0;
+    }
+    section{
+        margin-bottom: 100px;
+    }
+    .multi_section{
+        flex-direction: column;
+        
+    }
+    .text_block, .multi_section .image_block{
+        width: 100%;
+        text-align: center;
+    }
+    .multi_section .image_block img{
+        width:100%;
+        margin:0;
+        min-width: auto;
+    }
+    .text_block .text_block_part{
+        margin-top:50px;
+    }
+    footer .section{
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        
+    }
+    footer .block{
+        width: 100%;
+    }
+    footer .block_link ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .block_social{
+       
+        justify-content: center;
+    }
+    footer .block_link ul li{
+        width:100%;
+        margin: 10px 0;
+        text-align: center;
+    }
+}
